@@ -27,7 +27,7 @@ function ProductBanner() {
     useEffect(() => {
         setLoading(true);
 
-        const fetchProducts = axios.get("http://localhost:4000/Product");
+        const fetchProducts = axios.get("http://localhost:3001/Product");
         const delay = new Promise((resolve) =>
             setTimeout(resolve, 1000)
         );

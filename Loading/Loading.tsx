@@ -10,7 +10,7 @@ interface InitialLoadingProps {
 
 export default function InitialLoading({
                                            children,
-                                       }: InitialLoadingProps): JSX.Element {
+                                       }: InitialLoadingProps): React.ReactElement {
     const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
