@@ -1,0 +1,185 @@
+.box-profile{
+    background: linear-gradient(180deg, #9b90d5, #b094d6, #dea1e1);
+
+    height: 100%;
+    padding: 20px;
+    box-shadow: 0 0 5px 0.2px #8a76fc;
+    border-radius: 15px;
+}
+
+.title{
+    border-bottom: 1px solid #2a2e6b;
+}
+
+/*btn*/
+.btnSignup{
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    color: #932700;
+    border: 1px solid #932700;
+
+    padding:5px 10px ;
+    background-color: transparent;
+    border-radius: 15px ;
+    width: 100%;
+}
+.btnLogin{
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding:5px 10px ;
+    background-color: transparent;
+    border-radius: 15px ;
+    width: 100%;
+}
+
+.btnEdit{
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    color: #4bff23;
+    border: 1px solid #98c379;
+    padding:5px 10px ;
+    background-color: transparent;
+    border-radius: 15px ;
+    width: 100%;
+}
+
+
+
+
+.btnLogin::before {
+    border-radius: 15px ;
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: #ffffff;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    z-index: -1;
+}
+
+.btnLogin:hover::before {
+    color: #8a76fc;
+    border: none;
+    transform: scaleX(1);
+    transform-origin: right;
+}
+.btnLogin:hover {
+    border: 1px solid transparent;
+    transition: 1s all;
+    color: #8a76fc;
+}
+
+.btnSignup:hover {
+    border: 1px solid transparent;
+    transition: 1s all;
+    color: white;
+}
+
+
+
+
+.btnSignup::before {
+    border-radius: 15px ;
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: #932700;
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    z-index: -1;
+}
+
+.btnSignup:hover::before {
+    color: white;
+    border: none;
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+.btnEdit:hover {
+    border: 1px solid transparent;
+    transition: 1s all;
+    color: white;
+}
+
+
+
+
+.btnEdit::before {
+    border-radius: 15px ;
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: #5fa516;
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    z-index: -1;
+}
+
+.btnEdit:hover::before {
+    color: white;
+    border: none;
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+
+.btnSabtData{
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    color: white;
+    background-color: #2a2e6b;
+    border: 1px solid #98c379;
+    padding:5px 10px ;
+    border-radius: 15px ;
+    width: 100%;
+}
+
+
+.inp{
+    border: none;
+    padding: 10px ;
+    border-radius: 25px;
+}
+.imgProfile{
+    border-radius: 50%;
+}
+
+
+
+
+.fileInput {
+    display: none;
+}
+
+.uploadBtn {
+    background-color: #c9a227;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.uploadBtn:hover {
+    background-color: #a8841f;
+    transform: scale(1.05);
+}
+

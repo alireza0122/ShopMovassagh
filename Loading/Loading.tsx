@@ -32,9 +32,9 @@ export default function InitialLoading({
                 }}
             >
                 <div className={` d-flex flex-column justify-content-center align-items-center ${styles['boxImg']}`}>
-                    <Image className={` ${styles['Img']}`} alt={'site_logo'} src={"/img/site_logo_mobile.png"}  width={1500}  height={1500} />
+                    <Image className={` ${styles['Img']}`} alt={'site_logo'} src={"/img/logosite.png"}  width={1500}  height={1500} />
                     <p className={`fw-bold ${styles['TagP']}`}>
-                        vidamotors
+                        استار
                     </p>
                 </div>
             </div>

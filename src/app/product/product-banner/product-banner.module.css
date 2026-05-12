@@ -1,0 +1,143 @@
+.product-banner-img{
+    width: 100%;
+    height: 250px;
+    border-radius: 25px;
+
+}
+
+
+/*.product-banner-img-shoop{*/
+/*    position: absolute;*/
+/*    width: 50px;*/
+/*    height: 50px;*/
+/*    border-radius: 25px;*/
+/*    opacity: 1;*/
+/*    top: 100px;*/
+/*    transition: transform 2s ease,*/
+/*    top 1s ease,*/
+/*    left 1s ease,*/
+/*    position 0.1s ease,*/
+/*    visibility 0s linear 1s;*/
+/*}*/
+/*.product-banner-img:hover .product-banner-img-shoop{*/
+/*    position: absolute;*/
+
+/*    opacity: 0;*/
+/*    top: 0 !important;*/
+/*    left: 0 !important;*/
+
+/*}*/
+
+
+
+
+
+.product-banner-item{
+    background-color: #ffffff;
+    border-radius: 25px;
+}
+.product-banner-box{
+    padding: 0 20px 20px 20px   ;
+
+}
+
+.btn-product-add{
+    border: none;
+    border-radius: 20px ;
+    padding: 5px 10px;
+}
+.btn-product-del{
+    border: none;
+    border-radius: 20px ;
+    padding: 5px 10px;
+}
+.btn-product-add:hover{
+    background-color: #226500;
+    color: white;
+}
+.btn-product-del:hover{
+    background-color: indianred;
+    color: white;
+}
+.res-product{
+    background-color: #226500;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 50%;
+    color: white;
+}
+
+.res-productTow{
+    background-color: #226500;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: white;
+    padding: 10px;
+}
+
+
+
+
+.product-border-bottom{
+    border-bottom: 1px solid rgba(126, 122, 121, 0.96);
+    width: 100%;
+}
+.product-text{
+    display: flex;
+    justify-content: left;
+    color: green;
+}
+/*load*/
+.skeletonImage {
+    width: 100%;
+    height: 300px;
+    background: #e0e0e0;
+    border-radius: 8px;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+.skeletonTitle {
+    width: 70%;
+    height: 20px;
+    background: #e0e0e0;
+    margin: 10px 0;
+    border-radius: 4px;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+.skeletonText {
+    width: 100%;
+    height: 15px;
+    background: #e0e0e0;
+    margin: 6px 0;
+    border-radius: 4px;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+.skeletonPrice {
+    width: 40%;
+    height: 18px;
+    background: #e0e0e0;
+    margin: 10px 0;
+    border-radius: 4px;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+.skeletonButton {
+    width: 60%;
+    height: 35px;
+    background: #e0e0e0;
+    border-radius: 6px;
+    margin-top: 10px;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.4; }
+    100% { opacity: 1; }
+}
