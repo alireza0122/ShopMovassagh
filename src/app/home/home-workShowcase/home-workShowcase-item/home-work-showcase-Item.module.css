@@ -1,0 +1,128 @@
+.WorkShowcaseItem{
+    height: 100%;
+
+}
+
+.ItemP{
+    color: #0a0a0a !important;
+
+}
+.ItemImg{
+    border-radius: 50%;
+    outline: 20px white;
+    aspect-ratio: 5/5;
+    box-shadow: 0 0 10px 1px #f3d2ff;
+    width: 75% !important;
+    height: 75% !important;
+}
+
+/*.ItemImgDivOne,ItemImgDivTwo,ItemImgDivThree*/
+/*.ItemImgOne,ItemImgToTwo,ItemImgThree*/
+
+.ItemImgDivOne{
+    position: absolute;
+    right:  0;
+    top: 0;
+}
+.ItemImgOne{
+    outline: 20px white;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    right: 0;
+    box-shadow: 0 0 10px 5px #f3c8ff;
+    animation: moveLeftRight 2s ease-in-out infinite; /* زمان و تکرار */
+}
+
+.ItemImgDivTwo{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.ItemImgToTwo{
+    outline: 20px white;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    right: 0;
+    box-shadow: 0 0 10px 5px #f3c8ff;
+    animation: moveLeftRight 2s ease-in-out infinite; /* زمان و تکرار */
+}
+
+.ItemImgDivThree{
+    position: absolute;
+    left: 0;
+    bottom:  0;
+}
+.ItemImgThree{
+    outline: 20px white;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    right: 0;
+    box-shadow: 0 0 10px 5px #f3c8ff;
+    animation: moveLeftRightTwo 2s ease-in-out infinite; /* زمان و تکرار */
+}
+
+
+@keyframes moveLeftRight {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(2px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes moveLeftRightTwo {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(2px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .ItemImg{
+        outline: none !important;
+        height: 80%;
+        width: 80% !important;
+    }
+    .ItemImgDivOne{
+        display: none;
+        position: absolute;
+        right:  0;
+        top: 0;
+    }
+    .ItemImgDivTwo{
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .ItemImgDivThree{
+        display: none;
+    }
+
+}
+@media (min-width: 425px) and (max-width: 768px){
+    .ItemImg{
+        border-radius: 50%;
+        outline: 20px white;
+        aspect-ratio: 5/5;
+        box-shadow: 0 0 10px 1px #f3d2ff;
+        width: 50% !important;
+        height: 50% !important;
+    }
+
+}
+
