@@ -30,7 +30,7 @@ function ProductBanner() {
     useEffect(() => {
         setLoading(true);
 
-        const fetchProducts = axios.get("http://localhost:3001/Product");
+        const fetchProducts = axios.get("/api/products");
         const delay = new Promise((resolve) =>
             setTimeout(resolve, 1000)
         );

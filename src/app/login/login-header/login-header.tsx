@@ -45,14 +45,16 @@
         const [users, setUsers] = useState<User[] | null>(null);
     
         useEffect(() => {
-            axios.get("http://localhost:3001/user")
+            axios.get("/api/users")
                 .then((res) => {
                     console.log(res.data);
                     if (res.data && Array.isArray(res.data)) {
                         setUsers(res.data)
                         console.log(res.data)
                     } else {
+
                         setUsers([]);
+
                     }
                 })
 

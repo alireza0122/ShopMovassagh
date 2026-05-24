@@ -28,7 +28,7 @@
         useEffect(() => {
 
             axios
-                .get("http://localhost:3001/orders")
+                .get("/api/orders")
                 .then((res) => {
                     setOrders(res.data);
                 });
