@@ -1,5 +1,5 @@
 "use client"
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import styles from "./home-banner.module.css";
 import Container from "@/app/shared/Container/Container";
 import BannerCard from "@/app/home/home-banner/home-banner-cart/home-banner-cart";
@@ -8,10 +8,74 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import gsap from "gsap";
+import {TextPlugin} from "gsap/TextPlugin";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(TextPlugin, ScrollTrigger);
+gsap.registerPlugin(TextPlugin);
 
 function HomeBanner() {
 
     const [hoverIndex, setHoverIndex] = useState<number>(0);
+
+    useEffect(() => {
+
+        gsap.to(".titleRef", {
+            scrollTrigger: {
+                trigger: ".titleRef",
+                start: "top 80%",
+            },
+
+            ease: "linear",
+
+            text: {
+                value: "ما خدمات زیادی را برای مشتریان ارائه می‌دهیم",
+            },
+
+            duration: 2,
+            color: "white",
+        });
+
+        gsap.fromTo(
+            ".DecAnim",
+            {
+                x: 50,
+                opacity: 0,
+            },
+            {
+                scrollTrigger: {
+                    trigger: ".DecAnim",
+                    start: "top 80%",
+                },
+
+                opacity: 1,
+                x: 0,
+                ease: "linear",
+                duration: 1,
+            }
+        );
+
+        gsap.fromTo(
+            ".titleBtn",
+            {
+                y: 50,
+                opacity: 0,
+            },
+            {
+                scrollTrigger: {
+                    trigger: ".titleBtn",
+                    start: "top 85%",
+                },
+
+                opacity: 1,
+                y: 0,
+                ease: "linear",
+                duration: 1,
+            }
+        );
+
+    }, []);
 
 
     return (
@@ -23,15 +87,16 @@ function HomeBanner() {
 
                     <div className=" col-12 col-xl-5 mt-0 px-0 mt-lg-5 px-lg-5  ">
                         <div className="mx-5">
-                            <h1 className={`fs-20px fs-lg-36px fw-bold ${styles['titleBanner']} `}>
-                                ما خدمات زیادی را برای
-                                مشتریان
-                                <br/>
-                                ارائه می‌دهیم
+                            <h1 className={`${styles['titleBanner']} titleRef fw-lighter`}>
+
                             </h1>
-                            <p className={` ${styles['descriptionBanner']} `}>ما خدمات زیادی را
+                            <p
+
+                                className={` ${styles['descriptionBanner']} DecAnim`}>
+                                ما خدمات زیادی را
                                 برای هیچ زمان عاقلانه باردار تا زمانی که برای خودش درست درب به طرح بزرگ است.</p>
-                            <button className={`fs-16px fs-lg-20px border-0 ${styles['btnBanner']}`}>
+
+                            <button className={`titleBtn fs-16px fs-lg-20px border-0 ${styles['btnBanner']}`}>
                                 همین حالا شروع کنید
 
                             </button>
@@ -41,10 +106,9 @@ function HomeBanner() {
                         <div className="d-flex justify-content-end    d-none d-lg-block">
                             <div className={`position-relative  d-lg-flex         gap-3 ${styles['card']}`}>
                                 <BannerCard
-
                                     index={0}
                                     img1="/img/deneme-3--9416-.jpg"
-                                    img2="/img/WebHost24x7-About-Us-1024x1024.webp"
+                                    img2="/img/womacccn-cccc300x300.webp"
                                     link="/"
                                     hoverIndex={hoverIndex}
                                     SetHoverIndex={setHoverIndex}

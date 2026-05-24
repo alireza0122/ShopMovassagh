@@ -15,9 +15,12 @@
     /*background-color: #f6f6f6;*/
     transition: 1s all;
     background-color: #c6c6c6;
+    object-fit: cover;
 }
 
 .hoverImage {
+    object-fit: cover;
+
     transition: 1s all !important;
     position: absolute;
     top: 0;

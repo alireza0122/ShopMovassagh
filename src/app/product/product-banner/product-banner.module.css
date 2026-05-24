@@ -141,3 +141,52 @@
     50% { opacity: 0.4; }
     100% { opacity: 1; }
 }
+
+.search-box{
+    position: relative;
+    width: 70%;
+}
+
+.product-search{
+    border: 2px solid #8976fc;
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    border-radius: 10px;
+}
+.product-search:focus-visible{
+    border: 2px solid #646bd6 !important;
+    outline: none;
+    box-shadow: 0 0 2px 1px #646bd6;
+
+}
+
+.product-search-icon{
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

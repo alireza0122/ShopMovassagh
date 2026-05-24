@@ -4,7 +4,9 @@ import {useSimpleStore} from "@/store/usePaginationStore";
 import styles from './Shopping-cart.module.css'
 import Image from "next/image";
 import { useRouter } from 'next/navigation';
-
+import { useUserStore } from "@/store/usePaginationStore";
+import { useOrderStore } from "@/store/usePaginationStore";
+import axios from "axios";
 type Product = {
     id: string;
     title: string;
@@ -37,6 +39,9 @@ function ShoppingCart() {
         const handelResProductAdd = (item: Product) => {
             setCount(item);
         };
+
+        //
+
 
         return (
             <div key={item.id} className={`d-flex ${styles['CartItemDisplay-item']} `}>
@@ -113,10 +118,46 @@ function ShoppingCart() {
         return total + (item.price * item.qty);
     }, 0);
 
+
+
+    const addOrder = useOrderStore((state) => state.addOrder);
+
+    const userName = useUserStore((state) => state.userName);
+    const number = useUserStore((state) => state.number);
+
+    const handleSubmitOrder = async () => {
+
+        const newOrder = {
+            id: Date.now(),
+            userName,
+            number,
+            products: cart,
+            totalPrice,
+        };
+
+        try {
+
+            await axios.post(
+                "http://localhost:3001/orders",
+                newOrder
+            );
+
+            addOrder(newOrder);
+
+            alert("سفارش ثبت شد");
+
+        } catch (error) {
+
+            console.log(error);
+
+        }
+    };
+
     return (
         <div className={`container`}>
             <div className="row">
                 <div className="col-12">
+
                     <div>
                         <h2>سبد خرید شما</h2>
                         {cart.length === 0 ? (
@@ -143,8 +184,8 @@ function ShoppingCart() {
                                     </h4>
                                 </div>
                                 <div className="d-flex justify-content-center">
-                                    <button className={`col-6  fw-bold ${styles['btn-price']}`}>
-                                        پرداخت
+                                    <button onClick={handleSubmitOrder} className={`col-6  fw-bold ${styles['btn-price']}`}>
+                                        ثبت نهــایی
                                     </button>
                                 </div>
 

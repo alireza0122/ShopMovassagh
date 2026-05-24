@@ -72,15 +72,15 @@
       "title": "نمونه کار سایت شرکتی اورین اعتماد فاخر",
       "urlImg": "/img/679-1739360990.webp",
       "description": "وب‌سایت شرکتی اورین اعتماد فاخر با طراحی بصری چشم‌نواز و ساختاری منسجم، حس حرفه‌ای بودن و اعتبار را به مخاطب القا می‌کند. استفاده از ترکیب رنگ‌های",
-      "qty": 20,
+      "qty": "70",
       "price": 150000
     },
     {
       "id": "2",
-      "title": "نمونه کار سایت شرکتی بوف تریلر",
+      "title": "نمونه کار سایت شرکتی بوف تریلرhhhh",
       "urlImg": "/img/134-1739362781.webp",
       "description": "سایت بوف تریلر با طراحی مینیمال و مدرن خود، تجربه‌ای کاربری روان و لذت‌بخش را برای بازدیدکنندگان فراهم می‌کند. استفاده هوشمندانه از فضاهای خالی، تایپوگراف",
-      "qty": 10,
+      "qty": "50",
       "price": 1590000
     },
     {
@@ -142,147 +142,174 @@
   ],
   "user": [
     {
-      "id": "1",
-      "username": "alireza",
-      "password": "12345678",
-      "urlImg": "/img/679-1739360990.webp",
-      "biography": "من علی رضا موثق هستم",
-      "activity": "برنامه نویسی",
-      "favorites": "ورزش"
+      "username": "admin0",
+      "password": "admin123",
+      "id": "123",
+      "role": "admin"
     },
     {
-      "id": "2",
-      "username": "hadar",
-      "password": "12345678",
-      "urlImg": "/img/134-1739362781.webp",
-      "biography": "sacascascascascasc",
-      "activity": "sacascascascascasc",
-      "favorites": "sacascascascascasc"
+      "username": "sina",
+      "password": "sina1388",
+      "id": "o0R7L2U-uhY1",
+      "role": "user"
     },
     {
-      "id": "53cb",
-      "username": "hadar",
-      "password": "12345678hadar"
+      "username": "ali",
+      "password": "Ali1388",
+      "id": "o0R7L2U-uhY2",
+      "role": "user"
     },
     {
-      "id": "f115",
-      "biography": "سلام من علیرضام",
-      "activity": "برنامه",
-      "favorites": "فوتبال",
-      "urlImg": ""
+      "username": "amir",
+      "password": "amir1388",
+      "id": "o0R7L2U-uhY3",
+      "role": "user"
     },
     {
-      "id": "5a41",
-      "biography": "سلام من علیرضام",
-      "activity": "برنامه",
-      "favorites": "فوتبال",
-      "urlImg": ""
+      "username": "hosin",
+      "password": "hosin1388",
+      "id": "o0R7L2U-uhY4",
+      "role": "user"
     },
     {
-      "id": "605f",
-      "username": "hamid",
-      "password": "12345678Ali"
+      "username": "hamide",
+      "password": "hamide1388",
+      "id": "o0R7L2U-uhY5",
+      "role": "user"
     },
     {
-      "id": "456f",
-      "biography": "dwwwwwwwwwwwww",
-      "activity": "برنامه",
-      "favorites": "فوتبال",
-      "urlImg": ""
+      "username": "wqdwqqqqqqqqqqqqqqq",
+      "password": "qqqqqqqqqqqxA2qqqq",
+      "id": "VF7oaK3oPTM",
+      "role": "user"
     },
     {
-      "id": "6053",
-      "biography": "سلام من علیرضام",
-      "activity": "برنامه",
-      "favorites": "فوتبال",
-      "urlImg": ""
-    },
-    {
-      "id": "6853",
-      "biography": "سلام من علیرضام",
-      "activity": "برنامه",
-      "favorites": "فوتبال",
-      "urlImg": ""
-    },
-    {
-      "id": "5d2e",
-      "username": "alireza",
-      "password": "12345678a"
-    },
-    {
-      "id": "02ed",
-      "biography": "سلام من علیرضام",
-      "activity": "برنامه",
-      "favorites": "فوتبال",
-      "urlImg": ""
-    },
-    {
-      "id": "ac67",
-      "biography": "سلام من علیرضام",
-      "activity": "برنامه",
-      "favorites": "فوتبال",
-      "urlImg": ""
-    },
-    {
-      "id": "3a79",
-      "username": "alireza",
-      "password": "5xsssssssssS"
-    },
-    {
-      "id": "2e8e",
-      "biography": "سلام من علیرضام",
-      "activity": "برنامه",
-      "favorites": "fygygyugyu",
-      "urlImg": ""
-    },
-    {
-      "id": "efd7",
-      "biography": "سلام من علیرضام",
-      "activity": "برنامه",
-      "favorites": "فوتبال",
-      "urlImg": ""
-    },
-    {
-      "id": "548e",
-      "biography": "سلام من علیرضام",
-      "activity": "برنامه",
-      "favorites": "فوتبال",
-      "urlImg": "blob:http://localhost:3000/a300ced3-8d55-4834-8a68-93f5bf743da7"
-    },
-    {
-      "id": "b200",
-      "biography": "سلام من علیرضام",
-      "activity": "برنامه",
-      "favorites": "فوتبال",
-      "urlImg": "blob:http://localhost:3000/a300ced3-8d55-4834-8a68-93f5bf743da7"
-    },
-    {
-      "id": "feeb",
-      "biography": "سلام من علیرضام",
-      "activity": "برنامه",
-      "favorites": "فوتبال",
-      "urlImg": "blob:http://localhost:3000/a300ced3-8d55-4834-8a68-93f5bf743da7"
-    },
-    {
-      "id": "7731",
-      "biography": "سلام من علیرضام",
-      "activity": "برنامه",
-      "favorites": "فوتبال",
-      "urlImg": "blob:http://localhost:3000/a300ced3-8d55-4834-8a68-93f5bf743da7"
-    },
-    {
-      "id": "70d1",
-      "biography": "سلام من علیرضام",
-      "activity": "برنامه",
-      "favorites": "فوتبال",
-      "urlImg": ""
-    },
-    {
-      "id": "f91a",
-      "biography": "dwwwwwwwwwwwww",
-      "activity": "برنامه",
-      "favorites": "فوتبال",
-      "urlImg": ""
+      "username": "wqddddddddddd",
+      "password": "ddddddddddD1dddddddd",
+      "id": "opbKTHeL4cI",
+      "role": "user"
     }
-  ]
+  ],
+  "orders": [
+    {
+      "posts": [],
+      "Product": [],
+      "user": [],
+      "orders": [],
+      "id": "SdzaQ_L8Y-8"
+    },
+    {
+      "id": "jYFh9gBrqPQ",
+      "userName": "admin0",
+      "number": "admin123",
+      "products": [
+        {
+          "id": "1",
+          "title": "نمونه کار سایت شرکتی اورین اعتماد فاخر",
+          "urlImg": "/img/679-1739360990.webp",
+          "description": "وب‌سایت شرکتی اورین اعتماد فاخر با طراحی بصری چشم‌نواز و ساختاری منسجم، حس حرفه‌ای بودن و اعتبار را به مخاطب القا می‌کند. استفاده از ترکیب رنگ‌های",
+          "qty": 2,
+          "price": 150000
+        },
+        {
+          "id": "2",
+          "title": "نمونه کار سایت شرکتی بوف تریلر",
+          "urlImg": "/img/134-1739362781.webp",
+          "description": "سایت بوف تریلر با طراحی مینیمال و مدرن خود، تجربه‌ای کاربری روان و لذت‌بخش را برای بازدیدکنندگان فراهم می‌کند. استفاده هوشمندانه از فضاهای خالی، تایپوگراف",
+          "qty": 4,
+          "price": 1590000
+        }
+      ],
+      "totalPrice": 6660000
+    },
+    {
+      "id": "1Hb2vJDWj7c",
+      "userName": "hosin",
+      "number": "hosin1388",
+      "products": [
+        {
+          "id": "1",
+          "title": "نمونه کار سایت شرکتی اورین اعتماد فاخر",
+          "urlImg": "/img/679-1739360990.webp",
+          "description": "وب‌سایت شرکتی اورین اعتماد فاخر با طراحی بصری چشم‌نواز و ساختاری منسجم، حس حرفه‌ای بودن و اعتبار را به مخاطب القا می‌کند. استفاده از ترکیب رنگ‌های",
+          "qty": 2,
+          "price": 150000
+        },
+        {
+          "id": "5",
+          "title": "نمونه کار سایت نقل و حلوا ی ممتاز",
+          "urlImg": "/img/777-1732178437.webp",
+          "description": "فروشگاه اینترنتی نقل و نبات ممتاز، مرجعی معتبر برای خرید انواع نقل و نبات با طعم‌های سنتی و مدرن است. از ما بهترین‌ها را بخواهید.\n\n",
+          "qty": 1,
+          "price": 15000
+        }
+      ],
+      "totalPrice": 315000
+    },
+    {
+      "id": "oq8NeDTG3vU",
+      "userName": "hosin",
+      "number": "hosin1388",
+      "products": [
+        {
+          "id": "2",
+          "title": "نمونه کار سایت شرکتی بوف تریلرhhhh",
+          "urlImg": "/img/134-1739362781.webp",
+          "description": "سایت بوف تریلر با طراحی مینیمال و مدرن خود، تجربه‌ای کاربری روان و لذت‌بخش را برای بازدیدکنندگان فراهم می‌کند. استفاده هوشمندانه از فضاهای خالی، تایپوگراف",
+          "qty": 2,
+          "price": 1590000
+        },
+        {
+          "id": "5",
+          "title": "نمونه کار سایت نقل و حلوا ی ممتاز",
+          "urlImg": "/img/777-1732178437.webp",
+          "description": "فروشگاه اینترنتی نقل و نبات ممتاز، مرجعی معتبر برای خرید انواع نقل و نبات با طعم‌های سنتی و مدرن است. از ما بهترین‌ها را بخواهید.\n\n",
+          "qty": 1,
+          "price": 15000
+        }
+      ],
+      "totalPrice": 3195000
+    },
+    {
+      "id": "sgbt-aqBW5A",
+      "userName": "hosin",
+      "number": "hosin1388",
+      "products": [
+        {
+          "id": "1",
+          "title": "نمونه کار سایت شرکتی اورین اعتماد فاخر",
+          "urlImg": "/img/679-1739360990.webp",
+          "description": "وب‌سایت شرکتی اورین اعتماد فاخر با طراحی بصری چشم‌نواز و ساختاری منسجم، حس حرفه‌ای بودن و اعتبار را به مخاطب القا می‌کند. استفاده از ترکیب رنگ‌های",
+          "qty": 1,
+          "price": 150000
+        },
+        {
+          "id": "4",
+          "title": "نمونه کار سایت آقای معمار",
+          "urlImg": "/img/358-1732179547.webp",
+          "description": "سایت آقای معمار به عنوان یک پلتفرم تخصصی در حوزه ماشین‌آلات سنگین، با ارائه اطلاعات دقیق و جامع در مورد هر محصول، به شما کمک می‌کند تا بهترین تصمیم را بگیرید.\n\n",
+          "qty": 1,
+          "price": 80000
+        },
+        {
+          "id": "8",
+          "title": "سایت دفتر حقوقی نجات علی پور",
+          "urlImg": "/img/852-1704623496.jpg",
+          "description": "طراحی رابط کاربری منحصر به فرد با تمرکز بر سهولت استفاده برای مشتریان و تاکید بر تجربه کاربری بهینه در سایت وکیل نجات علی پور با با طراحی مدرن و ریسپانسیو",
+          "qty": 2,
+          "price": 2640000
+        },
+        {
+          "id": "9",
+          "title": "طراحی سایت مشاوره حقوقی انلاین عدل بند",
+          "urlImg": "/img/172-1704620354.jpg",
+          "description": "عدل بند ، یک پلتفرم برای مشاوره حقوقی (انلاین) است ولی امکان ارایه خدمات حقوقی حضوری هم ، پس از اخذ ( نوبت اینترنتی) برای شما عزیزان پیش بینی شده است\n\n",
+          "qty": 1,
+          "price": 2640000
+        }
+      ],
+      "totalPrice": 8150000
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

@@ -36,16 +36,16 @@ const BannerCard: React.FC<BannerCardProps> = ({index, img1, img2, link,text,des
                 <Image
                     src={img1}
                     alt="banner"
-                    width={300}
-                    height={300}
+                    width={1000}
+                    height={1000}
                     className={` ${styles.imgBoxBanner} ${isActive ? styles.hide : ""}`}
                 />
 
                 <Image
                     src={img2}
                     alt="banner hover"
-                    width={300}
-                    height={300}
+                    width={1000}
+                    height={1000}
                     className={` ${styles.imgBoxBanner} ${styles.hoverImage} ${
                         isActive ? styles.show : ""
                     }`}

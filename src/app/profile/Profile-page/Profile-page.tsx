@@ -22,13 +22,12 @@ function ProfilePage() {
         isLoggedIn
     } =
         useUserStore();
-    const [biography, setBiography] = useState(storedBio);
-    const [activity, setActivity] = useState(storedAct);
-    const [favorites, setFavorites] = useState(storedFav);
+    const [biography, setBiography] = useState(storedBio || "");
+    const [activity, setActivity] = useState(storedAct || "");
+    const [favorites, setFavorites] = useState(storedFav || "");
     const [userImage, setUserImage] = useState<File | null>(null);
     const [responseMessage, setResponseMessage] = useState("");
-
-
+    
     useEffect(() => {
         setBiography(storedBio);
         setActivity(storedAct);
@@ -53,7 +52,7 @@ function ProfilePage() {
 
     const [showForm, setShowForm] = useState(true);
 
-
+    
     const handleProfile = async () => {
 
 
@@ -95,7 +94,7 @@ function ProfilePage() {
         }
 
         login(newUserData);
-
+        
 
         login({
             isLoggedIn: "",
@@ -119,8 +118,7 @@ function ProfilePage() {
 
         const imageUrl = URL.createObjectURL(file);
         setUserImage(file);
-
-        // ذخیره در استور
+        
         login({
             urlImg: imageUrl
         });
@@ -239,6 +237,7 @@ function ProfilePage() {
                                 height={200}
                             />
                             <input
+                                id="profileImage"
                                 type="file"
                                 accept="image/*"
                                 onChange={handleImageChange}
@@ -249,6 +248,7 @@ function ProfilePage() {
                             </label>
                         </div>
                         <div className={`pt-4`}>
+                            
                             {
                             isLoggedIn && (
                                     <h1 className={`text-white`}>

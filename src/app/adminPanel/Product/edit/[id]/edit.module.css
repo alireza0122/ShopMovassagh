@@ -1,0 +1,42 @@
+.inp-box{
+    margin: 10px 70px;
+
+}
+
+.inp{
+    width: 100%;
+    font-size: 15px;
+    padding: 0 10px;
+    border-radius: 15px;
+    border: 1px solid transparent;
+
+}
+.inp:focus-visible{
+    outline: none;
+    border: 1px solid #642a98;
+}
+.inpTextarea{
+    width: 100%;
+    font-size: 15px;
+    padding: 0 10px;
+    border-radius: 15px;
+    border: 1px solid transparent;
+    min-width: 100%;
+    max-height: 200px;
+    min-height: 100px;
+}
+.inpTextarea:focus-visible{
+    outline: none;
+    border: 1px solid #642a98;
+}
+.inp-span{
+    font-size: 15px;
+}
+.BtnEdit{
+    background-color: #2c1640;
+    color: white;
+    font-size: 20px;
+    border-radius: 20px ;
+    padding: 5px 20px;
+    border: 0;
+}

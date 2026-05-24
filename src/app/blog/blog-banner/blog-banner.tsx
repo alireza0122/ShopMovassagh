@@ -39,7 +39,7 @@ function BlogBanner() {
         }, 1000);
 
         axios
-            .get("http://localhost:4000/posts")
+            .get("http://localhost:3001/posts")
             .then((res) => {
                 setPosts(res.data);
             })

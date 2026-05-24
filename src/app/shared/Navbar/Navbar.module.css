@@ -537,3 +537,62 @@
     transform:rotate(180deg) ;
 }
 
+.linkAdmin{
+    transform: scale(0.9);
+    color: #2c1640;
+    font-size: 20px;
+    border: 2px solid #2c1640;
+    padding: 1px 6px;
+    border-radius: 5px ;
+}
+.linkAdmin:hover{
+    transform: scale(1);
+    color: #ffffff;
+    font-size: 20px;
+    background-color: #2c1640;
+    padding: 1px 6px;
+    border-radius: 5px ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

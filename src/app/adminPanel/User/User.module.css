@@ -1,0 +1,43 @@
+.btnDel{
+    border: none;
+    color: #8976fc;
+    border-radius: 50%;
+    height: auto;
+    padding: 8px;
+}
+.btnDel-box{
+    border: 2px solid rgba(213, 213, 213, 0.24);
+    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 0.24);
+    border-radius: 5px;
+}
+.btnDel:hover{
+    color: #8a1a1a;
+    border: none;
+}
+.btnDel:hover .btnDel-icon{
+    color: #8a1a1a;
+    border: none;
+    animation: moveIcon 0.5s infinite;
+}
+@keyframes moveIcon {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    25%{
+        transform: rotate(10deg);
+
+    }
+
+    50%{
+        transform: rotate(-10deg);
+
+    }
+
+    100%{
+        transform: rotate(0deg);
+
+    }
+}
+
+

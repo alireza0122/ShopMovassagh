@@ -5,6 +5,8 @@ import Image from "next/image";
 import axios from "axios";
 import {useSimpleStore} from "@/store/usePaginationStore";
 import Link from "next/link";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faSearch} from "@fortawesome/free-solid-svg-icons";
 
 
 type Product = {
@@ -15,6 +17,7 @@ type Product = {
     qty: number;
     price: number;
 }
+
 
 function ProductBanner() {
     const [product, setproduct] = useState<Product[]>([]);
@@ -88,21 +91,57 @@ function ProductBanner() {
 
 
 
-
+    const [search, setSearch] = useState("");
+    const filteredProducts = product.filter((item) =>
+        item.title
+            .toLowerCase()
+            .split(" ")
+            .some((word) =>
+                word.includes(search.toLowerCase())
+            )
+    );
 
     return (
         <div className={styles['product-banner-box']}>
 
 
             <div className="container">
-                <div className="row">
-                    <div className="col-12 mb-3 mt-2  ">
+                <div className="row align-items-center">
+                    <div className="col-lg-5 col-12 ">
+
+
+                        <div className={styles['search-box']}>
+
+                            <input
+                                type="text"
+                                placeholder="جست و جو کنید ..."
+                                className={styles['product-search']}
+                                value={search}
+                                onChange={(e) => setSearch(e.target.value)}
+                            />
+
+                            <FontAwesomeIcon
+                                icon={faSearch}
+                                className={styles['product-search-icon']}
+                            />
+
+                        </div>
+
+
+                    </div>
+                    <div className="col-lg-7 col-12 mb-3 mt-2  ">
                         <div className="d-flex ">
-                            <h1 className={`text-color border-1 my-3 ${styles['product-border-bottom']}`}>
+                            <h1 className={`text-color my-3 fw-bold `}>
                                 محــصولات ما
                             </h1>
+
                         </div>
                     </div>
+
+
+                </div>
+                <div className="row">
+
                     {
                         loading
                             ? Array.from({ length: 6 }).map((_, index) => (
@@ -123,7 +162,7 @@ function ProductBanner() {
                                 </div>
                             ))
                             :
-                        product.map((item) => {
+                            filteredProducts.map((item) => {
                         const cartItem = cart.find((cartItem) => cartItem.id === item.id);
                         return (
                             <div key={item.id} className="col-4 product-card">

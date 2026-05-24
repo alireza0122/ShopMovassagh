@@ -14,7 +14,9 @@ import {useSimpleStore, useUserStore} from "@/store/usePaginationStore";
 
 function Navbar() {
 
-    const pathname = usePathname()
+    const pathname = usePathname();
+    const isAdminPanel = pathname?.startsWith("/adminPanel");
+
 
     const navbarLink = [
 
@@ -96,7 +98,25 @@ function Navbar() {
                     href: "/contact",
                 }
             ]
-        }
+        },
+        // {
+        //     id: 6,
+        //     href: "/",
+        //     title: "  مدیریت ",
+        //     dropdown: [
+        //         {
+        //             title: "پیگیری سفارشات",
+        //             href: "/contact",
+        //         },
+        //         {
+        //             title: "انتقادات و پیشنهادات",
+        //             href: "/contact",
+        //         }, {
+        //             title: "طراحی اپلیکیشن",
+        //             href: "/contact",
+        //         }
+        //     ]
+        // }
     ]
 
 
@@ -128,9 +148,8 @@ function Navbar() {
 
 
     //
-    const {userName , isLoggedIn} = useUserStore();
-
-
+    const {userName, role, isLoggedIn} = useUserStore();
+    console.log(role)
 
     // const clearFields = useUserStore((state) => state.clearFields);
     const cart = useSimpleStore((state) => state.cart);
@@ -142,10 +161,16 @@ function Navbar() {
             styles.bgHeader +
             (isSticky ? " " + styles.sticky : "")
         }>
+
+
             <div className="container">
                 <div className="row d-flex align-items-center">
-                    <div className="col-6 col-lg-2">
-                        <LogoSite/>
+                    <div className="col-6 col-lg-1">
+                        <div className="d-flex align-items-center gap-3">
+                            <LogoSite/>
+                        </div>
+
+
                     </div>
 
 
@@ -159,117 +184,127 @@ function Navbar() {
                     </div>
 
 
-                    <div className="col-lg-6 d-none d-lg-block">
-                        <ul
-                            className={
-                                styles['navUl'] +
-                                ' justify-content-around p-0 d-lg-flex ' +
-                                (open ? styles.open : '')
-                            }
-                        >
+                    {!isAdminPanel && (
+                        <div className="col-lg-5 d-none d-lg-block">
+                            <ul
+                                className={
+                                    styles['navUl'] +
+                                    ' justify-content-around p-0 d-lg-flex ' +
+                                    (open ? styles.open : '')
+                                }
+                            >
 
 
-                            <li className={styles['menuBtnZabdar']}>
-                                <button
-                                    className={styles.menuBtnZabdar}
-                                    onClick={() => setOpen(!open)}
-                                >
-                                    <FontAwesomeIcon icon={faXmark}/>
-                                </button>
-                            </li>
+                                <li className={styles['menuBtnZabdar']}>
+                                    <button
+                                        className={styles.menuBtnZabdar}
+                                        onClick={() => setOpen(!open)}
+                                    >
+                                        <FontAwesomeIcon icon={faXmark}/>
+                                    </button>
+                                </li>
 
 
-                            {
-                                navbarLink.map((item) => (
-                                    <li key={item.id} className={`${styles['liNav']}`}>
-                                        <Link
-                                            onClick={(e) => {
-                                                if (window.innerWidth <= 991) {
-                                                    e.preventDefault();
-                                                    toggleDropdown(item.id);
-                                                }
-                                            }}
-                                            className={` d-flex  justify-content-between  ${styles['linkNav']}  
+                                {
+                                    navbarLink.map((item ,index) => (
+                                        <li key={index} className={`${styles['liNav']}`}>
+                                            <Link
+                                                onClick={(e) => {
+                                                    if (window.innerWidth <= 991) {
+                                                        e.preventDefault();
+                                                        toggleDropdown(item.id);
+                                                    }
+                                                }}
+                                                className={` d-flex  justify-content-between  ${styles['linkNav']}  
                                                 `}
-                                            href={item.href}>
-                                            {item.title}
-                                            <FontAwesomeIcon
-                                                className={
-                                                    styles.iconLink +
-                                                    (activeDropdown === item.id ? " " + styles.rotate : "")}
-                                                icon={faChevronDown}/>
-                                        </Link>
+                                                href={item.href}>
+                                                {item.title}
+                                                <FontAwesomeIcon
+                                                    className={
+                                                        styles.iconLink +
+                                                        (activeDropdown === item.id ? " " + styles.rotate : "")}
+                                                    icon={faChevronDown}/>
+                                            </Link>
 
 
-                                        {item.dropdown && item.dropdown.length > 0 && (
-                                            <ul
-                                                className={
-                                                    styles.dropdown +
-                                                    (activeDropdown === item.id ? " " + styles.active : "")
-                                                }
-                                            >
-                                                {item.dropdown.map((link, index) => (
-                                                    <li key={index} className={styles.LiDropdown}>
-                                                        <Link href={link.href} className={styles.LiDropdownLink}>
-                                                            {link.title}
-                                                        </Link>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        )}
+                                            {item.dropdown && item.dropdown.length > 0 && (
+                                                <ul
+                                                    className={
+                                                        styles.dropdown +
+                                                        (activeDropdown === item.id ? " " + styles.active : "")
+                                                    }
+                                                >
+                                                    {item.dropdown.map((link ,index) => (
+                                                        <li key={index} className={styles.LiDropdown}>
+                                                            <Link href={link.href} className={styles.LiDropdownLink}>
+                                                                {link.title}
+                                                            </Link>
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            )}
 
 
-                                    </li>
+                                        </li>
 
-                                ))
+                                    ))
 
-                            }
+                                }
 
-                        </ul>
-                    </div>
+                            </ul>
+                        </div>
+                    )}
 
 
-                    <div className="col-4 d-none d-lg-block">
+
+
+                    <div className="col-5 d-none d-lg-block">
 
 
                         <div className="d-flex justify-content-end align-items-center gap-2">
-                            <Link className={`first-color`} href={`/profile`}>
-                                {isLoggedIn && (
-                                    <span> سلام {userName} 👋</span>
-                                )}
-                            </Link>
-                            {isLoggedIn ? (
-                                <>
+                            {!isAdminPanel && (
+                                <Link className={`first-color`} href={`/profile`}>
+                                    {isLoggedIn && (
+                                        <span> سلام {userName} 👋</span>
+                                    )}
+                                </Link>
+                            )}
+                            {!isAdminPanel && (
+                                isLoggedIn ? (
                                     <Link href="/profile">
                                         <button className={styles.btnLogin}>
                                             <Image src={`/img/logosite.png`} alt={`profile`} width={20} height={20}/>
                                         </button>
                                     </Link>
-
-                                </>
-                            ) : (
-                                <>
+                                ) : (
                                     <Link href="/login">
                                         <button className={styles.btnLogin}>
                                             ورود / ثبت نام
                                         </button>
                                     </Link>
-
-                                </>
+                                )
                             )}
-                            <Link id="cart-icon" className={` d-flex align-items-center  ${styles['btnLogin']}`} href={`/shopping`}>
-                                <FontAwesomeIcon
-                                    className={`  ${styles['iconShop']}`}
-                                    icon={faShoppingCart}
-                                />
-                                سبد خرید
-                                {totalItemCount > 0 && (
-                                    <p className={`fw-bold mx-1 ${styles['qtyShop']}`}>
-                                        {totalItemCount}
-                                    </p>
-                                )}
-                            </Link>
-
+                            {!isAdminPanel && (
+                                <Link id="cart-icon" className={`d-flex align-items-center ${styles['btnLogin']}`} href={`/shopping`}>
+                                    <FontAwesomeIcon className={styles['iconShop']} icon={faShoppingCart} />
+                                    سبد خرید
+                                    {totalItemCount > 0 && (
+                                        <p className={`fw-bold mx-1 ${styles['qtyShop']}`}>
+                                            {totalItemCount}
+                                        </p>
+                                    )}
+                                </Link>
+                            )}
+                            {!isAdminPanel && (
+                                isLoggedIn && role === "admin" && (
+                                    <Link
+                                        className={`${styles['linkAdmin']} fs-14px fw-bold`}
+                                        href={`/adminPanel`}
+                                    >
+                                        پنل مدیریت
+                                    </Link>
+                                )
+                            )}
 
                         </div>
 
@@ -286,9 +321,8 @@ function Navbar() {
                                     <h1 className={`m-0 fs-16px fw-bold  ${styles['hLogo']}`}>استار </h1>
                                 </div>
                             </li>
-                            {navbarLink.map(item => (
-                                <li className={` d-flex justify-content-between  align-items-center `}
-                                    key={item.id}>
+                            {navbarLink.map((item ,index) => (
+                                <li key={index} className={` d-flex justify-content-between  align-items-center `}>
                                     <Link
                                         className={`text-white py-3 px-3 `}
                                         href={item.href}

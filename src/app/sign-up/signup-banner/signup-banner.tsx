@@ -73,7 +73,7 @@ function SignupBanner() {
             return;
         }
 
-        const apiUrl = "http://localhost:4000/user";
+        const apiUrl = "http://localhost:3001/user";
 
         const userData = {
             username: userName,

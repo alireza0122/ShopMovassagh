@@ -9,27 +9,28 @@
     import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
     import {faEye, faEyeSlash} from "@fortawesome/free-solid-svg-icons";
     import axios from "axios";
-    
-    
-    type User = {
-        "id": number,
-        "username": string,
-        "password": string,
-        "urlImg": string,
-        "biography": string,
-        "activity": string,
-        "favorites": string
+
+
+    export type User = {
+        id: number;
+        username: string;
+        password: string;
+        urlImg: string;
+        biography: string;
+        activity: string;
+        favorites: string;
+        role: "admin" | "user";
     }
     
-    
     function LoginHeader() {
-    
+
+
         const router = useRouter();
         const [userName, setUsername] = useState("");
         const [number, setNumber] = useState("");
     
         const login = useUserStore((state) => state.login);
-    
+
     
 
     
@@ -44,7 +45,7 @@
         const [users, setUsers] = useState<User[] | null>(null);
     
         useEffect(() => {
-            axios.get("http://localhost:4000/user")
+            axios.get("http://localhost:3001/user")
                 .then((res) => {
                     console.log(res.data);
                     if (res.data && Array.isArray(res.data)) {
@@ -54,28 +55,39 @@
                         setUsers([]);
                     }
                 })
-    
+
         }, []);
-    
-    
+
+
         const handleLogin = () => {
             if (!users) {
                 setResponseMessage("لطفاً صبر کنید تا اطلاعات کاربر بارگذاری شود.");
                 return;
             }
-    
+
             if (users.length === 0) {
                 setResponseMessage("هیچ کاربری یافت نشد.");
                 return;
             }
-    
+
             const foundUser = users.find(user =>
                 user.username === userName && user.password === number
             );
-    
+
             if (foundUser) {
 
-                login({ userName, number });
+                document.cookie = `userId=${foundUser.id}; path=/`;
+                document.cookie = `role=${foundUser.role}; path=/`;
+
+                login({
+                    id: foundUser.id,
+                    userName: foundUser.username,
+                    biography: foundUser.biography,
+                    activity: foundUser.activity,
+                    favorites: foundUser.favorites,
+                    urlImg: foundUser.urlImg,
+                    role: foundUser.role,
+                });
 
                 router.push("/");
             } else {
@@ -87,7 +99,7 @@
                 }
             }
         };
-    
+
     
         return (
             <div className={`my-5`}>
@@ -96,6 +108,7 @@
     
                         <div className="col-7 py-4">
                             <div className="p-5  pt-3 pb-0 d-flex flex-column gap-3">
+
                                 <div className="">
                                     <LogoSite/>
                                 </div>

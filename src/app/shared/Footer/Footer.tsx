@@ -80,7 +80,7 @@ function Footer() {
 
 
     return (
-        <div className={`py-0 py-lg-4 ${styles['Footer']}`}>
+        <div className={`py-0 py-lg-4 ${styles['Footer']} position-relative`}>
             <div className="container">
                 <div className="row pt-3 pt-lg-5">
                     <div className="col-12 col-lg-4 ">

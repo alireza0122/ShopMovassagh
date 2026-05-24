@@ -19,7 +19,7 @@ export default function Page() {
     const [post, setPost] = useState<Post | null>(null);
 
     useEffect(() => {
-        axios.get("http://localhost:4000/posts")
+        axios.get("http://localhost:3001/posts")
             .then(res => {
                 const filtered = res.data.filter(
                     (p: Post) => p.id.toString().trim() === id.trim()

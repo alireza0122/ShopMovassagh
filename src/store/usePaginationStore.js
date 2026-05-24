@@ -3,34 +3,49 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
-export const useUserStore = create(
+
+
+export const useUserStore = create()(
     persist(
         (set) => ({
+            id: null,
             userName: "",
-            number: "",
             biography: "",
             activity: "",
             favorites: "",
             urlImg: "",
+            role: "",
             isLoggedIn: false,
 
-            login: (userData) => set({ ...userData, isLoggedIn: true }),
+            login: (userData) =>
+                set({
+                    id: userData.id,
+                    userName: userData.userName,
+                    biography: userData.biography,
+                    activity: userData.activity,
+                    favorites: userData.favorites,
+                    urlImg: userData.urlImg,
+                    role: userData.role,
+                    isLoggedIn: true,
+                }),
+
             logout: () =>
                 set({
+                    id: null,
                     userName: "",
-                    number: "",
                     biography: "",
                     activity: "",
                     favorites: "",
                     urlImg: "",
+                    role: "",
                     isLoggedIn: false,
                 }),
         }),
-        { name: "user-storage" }
+        {
+            name: "user-storage",
+        }
     )
 );
-
-
 export const useSimpleStore = create(
     persist(
         (set) => ({
@@ -68,6 +83,23 @@ export const useSimpleStore = create(
         }),
         {
             name: 'shopping-cart-storage',
+        }
+    )
+);
+
+
+export const useOrderStore = create(
+    persist(
+        (set) => ({
+            orders: [],
+
+            addOrder: (order) =>
+                set((state) => ({
+                    orders: [...state.orders, order],
+                })),
+        }),
+        {
+            name: "order-storage",
         }
     )
 );
