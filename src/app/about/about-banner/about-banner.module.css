@@ -1,0 +1,45 @@
+.box-img-AboutBanner {
+    border-radius: 35px 5px 5px 35px;
+    overflow: hidden;
+}
+
+.img-AboutBanner {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 35px 5px 5px 35px;
+    transition: 0.5s all;
+}
+
+.img-AboutBanner:hover {
+    transform: scale(1.1);
+}
+
+.box-moohit {
+    border-radius: 35px ;
+
+}
+
+.img-moohit {
+    width: 100%;
+    height: 350px;
+    border-radius: 35px;
+    transition: 0.5s all;
+}
+.text-box{
+    right: 90px;
+}
+.text{
+    /*display: none ;*/
+    color: white;
+    background-color: rgba(138, 118, 252, 0.50);
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+}
+.text:hover{
+    cursor: pointer;
+    background-color: rgba(138, 118, 252, 0.80);
+}
+
+
+

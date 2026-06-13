@@ -1,0 +1,93 @@
+.Experience{
+    /*background-color:  #2a2e6b;*/
+    width: 100%;
+
+}
+.BoxExperience{
+    /*background-color: #8a76fc;*/
+    height: 100%;
+    width: 100%;
+}
+.ExperienceTitle{
+    color: #342c5d;
+
+}
+.ExperienceDescription{
+    color: #6d6886;
+}
+.HappyCustomer{
+    padding: 20px;
+    width: 100%;
+    height: 100% ;
+    box-shadow: 0 0 5px 1px #c678dd;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+}
+.HappyCustomerH{
+    font-weight: bold;
+    color: #342c5d;
+}
+.HappyCustomerP{
+    color: #6d6886;
+}
+
+.CompleteWork{
+    height: 100% !important;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 0 5px 1px #c678dd;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+.CompleteWorkTo{
+    height: 100%;
+    width: 100% !important;
+    /*padding: 20px;*/
+    box-shadow: 0 0 5px 1px #c678dd;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+
+}
+
+
+.LogoRow{
+    background-color: #c678dd;
+}
+
+
+
+.CompleteWorkP{
+    font-weight: bold;
+    color: #342c5d;
+}
+.CompleteWorkH{
+    font-weight: bold;
+    color: #342c5d;
+}
+
+
+.imgSlider {
+    width: 80px !important;
+    height: 80px !important;
+    border-radius: 50px;
+}
+
+@media (max-width: 1200px) {
+
+    .imgSlider {
+        width: 40px !important;
+        height: 40px !important;
+        border-radius: 50px;
+    }
+}

@@ -1,0 +1,152 @@
+.LoginHeader{
+    background-color: white;
+    height: 100%;
+    border-radius: 10px;
+    margin-top: 50px;
+    box-shadow: 0 0 10px 1px #b8abff;
+
+}
+.bg-logo{
+    border-radius:  10px 10px 10px 10px;
+
+    /*width: 100%;*/
+    height: 100%;
+    background-image: url("../../../../public/img/login-img.jpg");
+    background-position: center;
+    object-fit: cover;
+}
+.logo{
+    opacity: 0.6 !important;
+}
+.inp{
+    border-radius: 20px;
+    background-color:#f8f8f8 ;
+    color: #8a76fc;
+    padding:10px 10px ;
+    margin: 5px;
+    width: 100%;
+    /*font-size: 20px;*/
+    border: none;
+    outline: none;
+}
+.lbl{
+    color: #8a76fc;
+
+}
+
+/**/
+.btnSignup{
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    color: #71e339;
+    border: 1px solid #71e339;
+
+    padding:5px 10px ;
+    background-color: transparent;
+    border-radius: 15px ;
+    width: 100% !important;
+}
+.btnLogin{
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    color: #8876fe ;
+    border: 1px solid #8876fe;
+    padding:5px 10px ;
+    background-color: transparent;
+    border-radius: 15px ;
+    width: 100%;
+
+}
+
+.btnLogin::before {
+    border-radius: 15px ;
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: #8a76fc;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    z-index: -1;
+}
+
+.btnLogin:hover::before {
+    color: white;
+    border: none;
+    transform: scaleX(1);
+    transform-origin: right;
+}
+.btnLogin:hover {
+    border: 1px solid transparent;
+    transition: 1s all;
+    color: white;
+}
+
+.btnSignup:hover {
+    border: 1px solid transparent;
+    transition: 1s all;
+    color: white;
+}
+
+
+
+
+.btnSignup::before {
+    border-radius: 15px ;
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: #66ae43;
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    z-index: -1;
+}
+
+.btnSignup:hover::before {
+    color: white;
+    border: none;
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+
+
+/**/
+.wrapper {
+    position: relative;
+    width: 250px;
+}
+
+.input {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 14px;
+}
+
+.input:focus {
+    border-color: #999;
+}
+
+.icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #666;
+    font-size: 18px;
+}
+
+
+.icon{
+    right:  95% !important;
+}

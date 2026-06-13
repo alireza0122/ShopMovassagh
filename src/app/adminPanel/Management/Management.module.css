@@ -1,0 +1,274 @@
+:root {
+    --p50: #EEEDFE;
+    --p100: #CECBF6;
+    --p200: #AFA9EC;
+    --p400: #7F77DD;
+    --p600: #534AB7;
+    --p800: #3C3489;
+    --p900: #26215C;
+    --g50: #F1EFE8;
+    --g100: #D3D1C7;
+    --g400: #888780;
+    --g800: #444441;
+    --green-50: #EAF3DE;
+    --green-600: #3B6D11;
+    --green-800: #27500A;
+}
+
+/* ── صفحه اصلی ── */
+.main-col {
+    padding: 0;
+    min-height: 100vh;
+}
+
+.page-header {
+    padding: 18px 24px 14px;
+    border-bottom: 1px solid var(--p50);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.page-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--p900);
+    margin: 0;
+}
+
+.order-count-badge {
+    background: var(--p50);
+    color: var(--p600);
+    border: 1px solid var(--p100);
+    padding: 3px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.orders-list {
+    padding: 16px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* ── کارت سفارش ── */
+.order-card {
+    border: 1.5px solid var(--p100);
+    border-radius: 16px;
+    overflow: hidden;
+    background: #fff;
+    transition: box-shadow 0.15s;
+}
+
+.order-card:hover {
+    box-shadow: 0 4px 16px rgba(83, 74, 183, 0.1);
+}
+
+.order-confirmed {
+    border-color: #C0DD97;
+}
+
+/* ── هدر کارت ── */
+.order-head {
+    background: var(--p900);
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.order-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--p400);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.order-username {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    margin: 0;
+}
+
+.order-id {
+    font-size: 11px;
+    color: var(--p200);
+    margin: 2px 0 0;
+}
+
+.total-badge {
+    background: var(--p600);
+    color: var(--p100);
+    padding: 5px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* ── لیست محصولات ── */
+.products-list {
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #fff;
+}
+
+.product-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid var(--p50);
+    background: var(--g50);
+    transition: border-color 0.12s;
+}
+
+.product-row:hover {
+    border-color: var(--p100);
+}
+
+.product-img {
+    width: 90px;
+    height: 65px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 1px solid var(--p100);
+}
+
+.product-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+}
+
+.product-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--p900);
+    margin: 0;
+}
+
+.product-meta {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.meta-item {
+    font-size: 12px;
+    color: var(--g400);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.meta-val {
+    font-weight: 500;
+    color: var(--g800);
+}
+
+.product-desc {
+    font-size: 11px;
+    color: var(--g400);
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-total {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--p600);
+    background: var(--p50);
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: 1px solid var(--p100);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* ── فوتر کارت ── */
+.order-footer {
+    padding: 12px 20px;
+    border-top: 1px solid var(--p50);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+}
+
+.btn-confirm {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 9px 20px;
+    border-radius: 10px;
+    border: none;
+    background: var(--p600);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s;
+}
+
+.btn-confirm:hover:not(:disabled) {
+    background: var(--p800);
+    transform: translateY(-1px);
+}
+
+.btn-confirm:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.btn-confirmed {
+    background: var(--green-600) !important;
+    cursor: default;
+}
+
+.total-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.total-label {
+    font-size: 12px;
+    color: var(--g400);
+}
+
+.total-val {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--p800);
+}
+
+/* ── حالت خالی ── */
+.empty-state {
+    text-align: center;
+    padding: 48px;
+    color: var(--g400);
+    font-size: 14px;
+}

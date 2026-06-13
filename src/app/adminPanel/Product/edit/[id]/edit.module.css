@@ -1,0 +1,279 @@
+:root {
+    --p50: #EEEDFE;
+    --p100: #CECBF6;
+    --p200: #AFA9EC;
+    --p400: #7F77DD;
+    --p600: #534AB7;
+    --p800: #3C3489;
+    --p900: #26215C;
+    --g50: #F1EFE8;
+    --g100: #D3D1C7;
+    --g400: #888780;
+    --g800: #444441;
+}
+
+/* ── صفحه اصلی ── */
+.main-col {
+    padding: 20px 32px 48px;
+}
+
+@media (max-width: 768px) {
+    .main-col {
+        padding: 16px;
+    }
+}
+
+/* ── breadcrumb ── */
+.breadcrumb-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+    font-size: 13px;
+    flex-wrap: wrap;
+}
+
+.breadcrumb-link {
+    color: var(--p400);
+    cursor: pointer;
+    transition: color 0.15s;
+}
+
+.breadcrumb-link:hover {
+    color: var(--p800);
+}
+
+.breadcrumb-sep {
+    color: var(--g100);
+}
+
+.breadcrumb-current {
+    color: var(--g400);
+}
+
+.id-badge {
+    margin-right: auto;
+    font-size: 11px;
+    color: var(--p400);
+    background: var(--p50);
+    border: 1px solid var(--p100);
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-family: monospace;
+}
+
+/* ── کارت فرم ── */
+.form-card {
+    border: 1.5px solid var(--p100);
+    border-radius: 16px;
+    overflow: hidden;
+    background: #fff;
+    max-width: 100%;
+}
+
+/* ── هدر کارت ── */
+.card-header {
+    background: var(--p900);
+    padding: 16px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 400px;
+}
+
+.card-subtitle {
+    font-size: 11px;
+    color: var(--p200);
+    margin: 3px 0 0;
+}
+
+/* ── تصویر ── */
+.img-preview {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid var(--p100);
+    transition: opacity 0.2s;
+}
+
+.img-placeholder {
+    width: 100%;
+    height: 100px;
+    background: var(--p50);
+    border-bottom: 1px solid var(--p100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-placeholder-text {
+    font-size: 13px;
+    color: var(--p200);
+}
+
+/* ── بدنه فرم ── */
+.form-body {
+    padding: 22px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+@media (max-width: 480px) {
+    .field-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ── label ── */
+.label {
+    font-size: 12px;
+    color: var(--g400);
+    font-weight: 500;
+}
+
+/* ── input ── */
+.inp {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1.5px solid var(--p100);
+    background: var(--p50);
+    font-size: 13px;
+    color: var(--g800);
+    outline: none;
+    transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
+}
+
+.inp:focus {
+    border-color: var(--p400);
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(127, 119, 221, 0.12);
+}
+
+.inp::placeholder {
+    color: var(--g100);
+}
+
+/* ── textarea ── */
+.inp-textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1.5px solid var(--p100);
+    background: var(--p50);
+    font-size: 13px;
+    color: var(--g800);
+    outline: none;
+    min-height: 110px;
+    max-height: 220px;
+    resize: vertical;
+    transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
+}
+
+.inp-textarea:focus {
+    border-color: var(--p400);
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(127, 119, 221, 0.12);
+}
+
+.inp-textarea::placeholder {
+    color: var(--g100);
+}
+
+/* ── جداکننده ── */
+.divider {
+    height: 1px;
+    background: var(--p50);
+}
+
+/* ── دکمه‌ها ── */
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-submit {
+    flex: 1;
+    padding: 11px;
+    border-radius: 10px;
+    border: none;
+    background: var(--p600);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s;
+}
+
+.btn-submit:hover:not(:disabled) {
+    background: var(--p800);
+    transform: translateY(-1px);
+}
+
+.btn-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn-cancel {
+    flex: 1;
+    padding: 11px;
+    border-radius: 10px;
+    border: 1.5px solid var(--p100);
+    background: #fff;
+    color: var(--p600);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.btn-cancel:hover {
+    background: var(--p50);
+}
+
+/* ── loading ── */
+.loading-state {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+}
+
+.loading-pulse {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 3px solid var(--p100);
+    border-top-color: var(--p600);
+    animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+ 

@@ -1,0 +1,75 @@
+import React from "react";
+import Image from "next/image";
+import styles from "./home-banner-cart.module.css";
+import Link from "next/link";
+
+import { Dispatch, SetStateAction } from 'react'
+
+interface BannerCardProps {
+    index: number
+    img1: string
+    img2: string
+    link: string
+    hoverIndex: number
+    SetHoverIndex: Dispatch<SetStateAction<number>>
+    text: string
+    description: string
+}
+
+
+
+function BannerCard({ index, img1, img2, link, hoverIndex, SetHoverIndex, text, description }: BannerCardProps) {
+
+
+    const isActive = hoverIndex === index;
+
+
+    return (
+        <>
+
+            <Link
+                href={link}
+                className={`position-relative  ${styles.card}`}
+                onMouseEnter={() => SetHoverIndex(index)}
+                // onMouseLeave={() => setHoverIndex(0)}
+            >
+                <Image
+                    src={img1}
+                    alt="banner"
+                    width={1000}
+                    height={1000}
+                    className={` ${styles.imgBoxBanner} ${isActive ? styles.hide : ""}`}
+                />
+
+                <Image
+                    src={img2}
+                    alt="banner hover"
+                    width={1000}
+                    height={1000}
+                    className={` ${styles.imgBoxBanner} ${styles.hoverImage} ${
+                        isActive ? styles.show : ""
+                    }`}
+
+                />
+                    <p  className={`${styles['textmain']} `}>
+
+
+                        دربـــــاره
+                        <span className={` ${styles['datA']}`}>.</span>
+                        <span className={` ${styles['datB']}`}>.</span>
+                        <span className={` ${styles['datC']}`}>.</span>
+                    </p>
+
+                <div className={`${styles.text} position-absolute bottom-0 text-white p-2`}>
+                    <p>{text}</p>
+                    <p>{description}</p>
+                </div>
+
+            </Link>
+
+        </>
+
+    );
+};
+
+export default BannerCard;

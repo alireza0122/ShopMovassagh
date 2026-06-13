@@ -1,0 +1,70 @@
+.Img {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+
+    object-fit: contain;
+
+}
+
+
+
+
+.TagP {
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+
+    color: #195675;
+
+    background: linear-gradient(
+            to right,
+            #2a2e6b 0%,
+            #3a42b3 50%,
+            #646bd6 50%,
+            #8189ff 100%
+    );
+
+    background-size: 200% 100%;
+    background-position: 100% 0;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: textFill 2s ease forwards;
+}
+
+@keyframes textFill {
+    from {
+        background-position: 100% 0;
+    }
+    to {
+        background-position: 0 0;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .TagP {
+        font-size: 60px;
+    }
+
+    .Img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .TagP {
+        font-size: 40px;
+    }
+
+    .Img {
+        display: flex;
+        justify-content: center;
+        width: 100px;
+        height: 100px;
+    }
+}

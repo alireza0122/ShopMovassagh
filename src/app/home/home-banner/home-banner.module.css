@@ -1,0 +1,26 @@
+
+
+
+.titleBanner{
+    color: #332b5d !important;
+
+}
+.descriptionBanner {
+    color: #7e7a79;
+}
+.btnBanner{
+    background-color: #8a76fc;
+    padding: 10px;
+    border-radius: 15px;
+    color: white;
+}
+.btnBanner:hover{
+    color: #d1d1d1;
+}
+
+
+
+/**/
+
+
+

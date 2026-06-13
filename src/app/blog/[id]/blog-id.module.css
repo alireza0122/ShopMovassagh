@@ -1,0 +1,47 @@
+.category{
+    color: #8a76fc;
+    padding: 2px 10px;
+    border-radius: 20px;
+    background-color: white;
+    cursor: pointer;
+}
+.category:hover{
+    color: #47008e;
+    background-color: #e8e8e8;
+    transition: 0.5s all;
+}
+
+.weblog{
+    color: #8a76fc;
+    padding: 2px 10px;
+    border-radius: 20px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.weblog:hover{
+    color: #47008e;
+    background-color: #e8e8e8;
+    transition: 0.5s all;
+}
+
+
+
+.img-box{
+    overflow: hidden;
+    border-radius: 5px 50px 50px 5px;
+
+}
+.img{
+    height: 100%;
+    transition:0.5s all !important;
+    object-fit: cover;
+    border-radius: 5px 50px 50px 5px;
+
+}
+.img:hover{
+    transform: scale(1.1);
+}
+.border-bottom{
+    border-bottom: 1px solid rgba(85, 85, 85, 0.91);
+}

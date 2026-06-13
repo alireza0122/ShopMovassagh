@@ -1,0 +1,36 @@
+.overlay {
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin: 20px;
+    z-index: 999999;
+}
+
+.box {
+    padding: 10px;
+    border-radius: 12px;
+    color: white;
+    min-width: 350px;
+    text-align: center;
+}
+
+.success {
+    background: rgba(34, 197, 94, 0.82);
+}
+
+.error {
+    background: #8a1a1a;
+}
+
+.message {
+    margin: 0;
+    font-weight: bold;
+}
+
+.btn {
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+}

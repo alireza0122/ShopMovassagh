@@ -1,0 +1,19 @@
+.MemberCart{
+    box-shadow: 0 0 5px 0 #dbace6;
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.MemberCartImg{
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+}
+.MemberCartTitle{
+    color: #332c5d;
+}
