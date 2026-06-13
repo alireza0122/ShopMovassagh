@@ -1,10 +1,9 @@
 "use client"
 
-import React, {useEffect, useState} from 'react';
+import React, { useState } from 'react';
 import AdminPanelSidebar from "@/app/adminPanel/adminPanel-sidebar/adminPanel-sidebar";
-import axios from "axios";
 import styles from "./Management.module.css";
-
+import { useOrderStore } from "@/store/usePaginationStore";
 type Product = {
     id: string;
     title: string;
@@ -26,15 +25,10 @@ function getInitials(name: string): string {
 }
 
 function Page() {
-    const [orders, setOrders] = useState<OrderType[]>([]);
+    const orders = useOrderStore((state) => state.orders) as OrderType[];
     const [confirmed, setConfirmed] = useState<Set<number>>(new Set());
 
-    useEffect(() => {
-        axios
-            .get("/data/db.json")
-            .then((res) => setOrders(res.data.orders || []))
-            .catch((err) => console.log(err));
-    }, []);
+
 
     const handleConfirm = (id: number) => {
         setConfirmed(prev => new Set(prev).add(id));
